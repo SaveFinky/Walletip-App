@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">WalleTip</string>
+
+    <string-array name="Hours">
+        <item>1h00m</item>
+        <item>1h10m</item>
+        <item>1h20m</item>
+        <item>1h30m</item>
+        <item>1h40m</item>
+        <item>1h50m</item>
+        <item>2h00m</item>
+        <item>2h10m</item>
+        <item>2h20m</item>
+        <item>2h30m</item>
+        <item>2h40m</item>
+        <item>2h50m</item>
+        <item>3h00m</item>
+        <item>3h10m</item>
+        <item>3h20m</item>
+        <item>3h30m</item>
+        <item>3h40m</item>
+        <item>3h50m</item>
+        <item>4h00m</item>
+
+    </string-array>
+</resources>

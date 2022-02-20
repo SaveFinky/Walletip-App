@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/hours_reward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roudstyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_settings">
+
+        <TextView
+            android:id="@+id/tv_s_Hours_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Enter the hourly rate :"
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_eh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:text="€/h"
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintStart_toEndOf="@+id/etn_hourly_rate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_s_Hours_reward" />
+
+        <EditText
+            android:id="@+id/etn_hourly_rate"
+            android:layout_width="179dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_s_Hours_reward" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/car_yesno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roudstyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hours_reward">
+
+        <RadioGroup
+            android:id="@+id/rbg_Car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_car_yn2">
+
+            <RadioButton
+                android:id="@+id/rb_car_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:checked="true"
+                android:onClick="selectYesCar"
+                android:text="Yes"
+                android:textColor="@color/textcolor"
+                android:textSize="19dp" />
+
+            <RadioButton
+                android:id="@+id/rb_car_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:onClick="selectNoCar"
+                android:text="No"
+                android:textColor="@color/textcolor"
+                android:textSize="19dp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_car_yn2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginStart="20dp"
+            android:ellipsize="end"
+            android:text="( if you don't use your car you can remove\n the selector ) "
+            android:textColor="@color/textcolor"
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_car_yn" />
+
+        <TextView
+            android:id="@+id/tv_s_car_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:text="Enter the fee for the car  :"
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbg_Car" />
+
+        <TextView
+            android:id="@+id/tv_eh2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:text="€"
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintStart_toEndOf="@+id/etn_car"
+            app:layout_constraintTop_toBottomOf="@+id/tv_s_car_reward" />
+
+        <EditText
+            android:id="@+id/etn_car"
+            android:layout_width="179dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_s_car_reward" />
+
+        <TextView
+            android:id="@+id/tv_car_yn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Do you use your car?"
+            android:textColor="@color/textcolor"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="SETTINGS :"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save_settings"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="@color/paint"
+        android:onClick="saveSettings"
+        android:text="SAVE"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_yesno" />
+
+    <Button
+        android:id="@+id/btn_add_record"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/background"
+        android:onClick="DialogClearDB"
+        android:text="CLEAR DATABASE"
+        android:textColor="@color/paint"
+        android:textSize="8dp"
+        app:cornerRadius="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/paint"
+        app:strokeWidth="1dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

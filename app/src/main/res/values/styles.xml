@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AlertDialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/paint</item>
+        <item name="android:backgroundTint">@color/background</item>
+        <item name="titleTextColor">#FFFFFF</item>
+        <item name="android:textColorAlertDialogListItem">@color/white</item>
+    </style>
+
+    <style name="MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background"  tools:ignore="NewApi">@color/background</item>
+        <item name="background">@color/background</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/paint</item>
+        <item name="colorPrimaryDark">@color/background</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+
+</resources>
